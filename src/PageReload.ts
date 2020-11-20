@@ -58,7 +58,7 @@ var init = function(time:number, tips:string, color:string){
 		addEvents(okDom , "click" , () => {
 			var wraperDom=document.getElementById("alertFram");
 			wraperDom.remove();
-			window.pageReloadTimmer = null;
+			clearTimeout(window.pageReloadTimmer);
 			window.location.reload();
 		});
 	}, time*1000);

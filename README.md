@@ -30,6 +30,6 @@ npm publish
 
 ###   案例
 ```js
-import {PageReload} from 'page-reload-com';
-PageReload(120, '请重新加载页面', '#FF704F')
+import Reload from 'page-reload-com';
+Reload.PageReload(120, '请重新加载页面', '#FF704F')
 ```
