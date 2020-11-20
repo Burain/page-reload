@@ -7,4 +7,4 @@
 import PageReload from "../src/PageReload" ;
 
 // test
-PageReload() ;
+PageReload(10) ;

@@ -14,7 +14,7 @@ var addEvents = function(target:any , eventType:any , handle:any , bubblePart = 
         handle.call(target , arguments) ;
       });
     };
-  };
+  }
   addEvents(target , eventType , handle) ;
 } ;
 
@@ -22,10 +22,10 @@ var addEvents = function(target:any , eventType:any , handle:any , bubblePart = 
 function check(value:any, type:string, defaultValue:any) {
 	type = type || 'String';
 	if(value) {
-		if(Object.prototype.toString.call(value) == '[object ' + type + ']') {
+		if(Object.prototype.toString.call(value) === '[object ' + type + ']') {
 			return value;
 		} else {
-			console.log(`请输入${type}类型参数。`)
+			console.log(`请输入${type}类型参数。`);
 			return defaultValue;
 		}
 	} else {
@@ -62,7 +62,7 @@ var init = function(time:number, tips:string, color:string){
 			window.location.reload();
 		});
 	}, time*1000);
-}
+};
 
 const PageReload = (timeSecond?: number, tips?:string, color?: string) : void => {
     if (window.document) {
@@ -70,8 +70,8 @@ const PageReload = (timeSecond?: number, tips?:string, color?: string) : void =>
 		timeSecond = check(timeSecond, 'Number', 86400);
 		if(timeSecond < 10) timeSecond = 10;
 		color = check(color, 'String', '#FF704F');
-		init(timeSecond, tips, color)
-		return
+		init(timeSecond, tips, color);
+		return;
 	}
 } ;
 
