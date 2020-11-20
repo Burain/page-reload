@@ -64,7 +64,7 @@ var init = function(time:number, tips:string, color:string){
 	}, time*1000);
 }
 
-const PageReload = (timeSecond: number, tips:string, color: string) : void => {
+const PageReload = (timeSecond?: number, tips?:string, color?: string) : void => {
     if (window.document) {
 		tips = check(tips, 'String', '请刷新当前页面，获取最新资源。');
 		timeSecond = check(timeSecond, 'Number', 86400);
